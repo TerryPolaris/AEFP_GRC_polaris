@@ -1,0 +1,174 @@
+AEFP-Driven Identification of Disaster-Response Robotics Needs
+
+A Failure-Aware, Field-Ready Systems Perspective
+
+Primary Language: English
+(Chinese and Japanese localization prepared as secondary versions)
+
+0. Positioning Statement (Neutral, Non-Aligned)
+
+This work proposes a failure-aware robotic systems framework for disaster response and extreme environments.
+It is not aligned with any political, military, or commercial bloc.
+
+The objective is singular:
+to reduce human exposure to irreversible risk by allowing machines to fail, learn, and survive where humans should not be sent.
+
+1. How AEFP Is Used to Identify Real Needs (Method Overview)
+
+AEFP (Actor–Event–Frame–Pattern) is used not as a narrative tool, but as a systemic need-detection engine.
+
+Why AEFP?
+
+Because conventional requirement gathering fails in disaster contexts:
+
+Users cannot fully articulate needs in advance
+
+Failures are rare but catastrophic
+
+Demo success ≠ field survivability
+
+AEFP instead asks:
+
+Who truly bears risk? (Actor)
+
+What actually happens in the field? (Event)
+
+How is the problem currently framed? (Frame)
+
+What repeats across incidents? (Pattern)
+
+Needs are identified where AEFP shows structural misalignment.
+
+2. AEFP Core Model (Included for All Institutions)
+A — Actor
+
+Primary: Human responders (firefighters, rescue teams)
+
+Secondary: Existing robotic systems
+
+Tertiary: New robotic platforms as risk absorbers
+
+AEFP Insight:
+Actors with irreversible loss (humans) must not be the final risk sink.
+
+E — Event
+
+Terrain collapse
+
+Loss of visibility
+
+High heat / toxic exposure
+
+Unpredictable contact forces
+
+Progressive instability (not single failures)
+
+AEFP Insight:
+Disaster events are continuous degradation processes, not discrete incidents.
+
+F — Frame
+
+Current dominant frame:
+
+“How do we prevent failure?”
+
+AEFP-corrected frame:
+
+“How do we constrain the consequences of inevitable failure?”
+
+AEFP Insight:
+Avoidance-only frames push machines out of the most critical zones.
+
+P — Pattern
+
+Observed globally:
+
+Robots work well until conditions become truly dangerous
+
+At that point, humans re-enter the scene
+
+Injury and loss occur during this transition
+
+AEFP Insight:
+The repeating pattern is risk rebound to humans.
+
+3. What AEFP Reveals as the Missing Capability
+
+Across countries and institutions, AEFP consistently identifies the same gap:
+
+There is no accepted system layer that manages controlled failure.
+
+Specifically missing:
+
+Explicit “survival mode” in control logic
+
+Acceptance of partial damage
+
+Design for recoverability after falls or impacts
+
+Learning from boundary violations, not just task success
+
+This gap is institutional, not technical.
+
+4. Target Institutions Identified via AEFP
+
+The following institutions are selected not by reputation, but by AEFP compatibility:
+
+Field exposure
+
+Acceptance of equipment loss
+
+Mandate to reduce human risk
+
+Capacity for real-world testing
+
+Title: Toward Next-Generation AI-Driven Mobile Robots for Disaster Response — An AEFP-Guided Analysis
+1. Introduction
+
+Recent advances in robotic systems and artificial intelligence have accelerated research into robots capable of operating in disaster environments that are unsafe or inaccessible to humans. Autonomous disaster robots range from ground vehicles and aerial drones to snake-like and legged platforms that must navigate unstructured terrain, perceive hazards, and make decisions under uncertainty. Research indicates that globally, rescue robotics has entered a phase where integration of AI, perception, adaptive locomotion, and control is critical to effectiveness. 
+The University of Sydney
++1
+
+This paper uses an AEFP framework (Actors × Events × Frames × Patterns) to identify needs and gaps in current capabilities for disaster robotics, outlining conditions necessary to reach high performance autonomy, and provides candidate research institutions in Australia, China, and Japan with potential demand for collaborative research.
+
+2. Analytical Framework: AEFP for Robotic Systems in Disaster Response
+
+Actors: Robots (ground, aerial, hybrid), AI modules (navigation, perception), human rescuers
+Events: Earthquakes, fires, structural collapse, hazardous environments
+Frames: Mission objectives (search, assist, rescue, mapping), environmental constraints
+Patterns: Dynamic navigation patterns, adaptive behaviors, risk mitigation strategies
+
+AEFP posits that robots’ effectiveness (Ψ) depends on how strongly they can align F (function/performance) with P (physical embodiment, e.g., joints, limbs, materials) through adaptive actuation, perception, and learning. Key performance indicators include robustness in unstructured environments, autonomy level, real-time perception, and safe interaction with humans and environment.
+
+3. Current State and Gaps in Disaster Robotics
+3.1. Mobility and Locomotion
+
+Disaster environments are highly variable (rubble, uneven terrain, water, narrow gaps). Traditional wheel or track robots face limits in adaptability, while legged and morphable platforms (e.g., hexapods) show promise but remain constrained by complexity, power, and control challenges. 
+CSIRO
+
+3.2. Autonomy and Adaptive Decision Making
+
+State-of-the-art systems, including multi-robot coordination, are moving beyond teleoperated models toward semi-autonomy, yet fully autonomous decision-making in unpredictable scenarios is under active research. 
+TechNice科技島-掌握科技與行銷最新動態
+
+3.3. Perception and Interaction
+
+Integrating multi-modal sensing (LiDAR, vision, thermal, gas, etc.) with AI for environment understanding is central to successful manipulation and navigation. This remains a key area where AI learning systems must evolve to handle edge cases and real-time changes.
+
+3.4. Resilience and Safe Behavior
+
+Successful disaster robots need resilience to power constraints, fallback mechanisms (e.g., compressed posture on impact), and soft control strategies (e.g., compliant joints) that balance stability and adaptability.
+
+4. Defining Next-Gen Conditions for High-Performance Disaster Robots
+
+Based on AEFP and field trends:
+
+Adaptive Locomotion: Multi-modal mobility (legs, wheels, flexible body) capable of switching gait and posture dynamically.
+
+Context-Aware Perception: Robust scene representation in changing environments across sensor modalities.
+
+Autonomous Decision and Learning: Real-time path planning, anomaly detection, and task prioritization with minimal human intervention.
+
+Compliant and Robust Hardware: Materials and actuation designs that tolerate impacts and variable terrain.
+
+Human-Robot Integration: Interfaces for seamless mission planning and mixed-initiative control.
