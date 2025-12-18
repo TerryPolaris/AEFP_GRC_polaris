@@ -1,0 +1,115 @@
+ENGINE="AEFP_Symbolic_Crystal_1400"
+MODE="AEFP_CORE_ORIGINAL"
+
+# =========================
+# AEFP(t) = (Actor, Event, Frame, Pattern)
+# =========================
+Actor := {primary, secondary, objective}
+Event := (action, background)
+Frame := (view, domain, intent)
+Pattern := (momentum, speed, window)
+
+Φ := U(Actor, Event, Frame)
+T := ||Frame - Pattern||
+Λ := 1/(1 + T)
+Ψ := Φ - κ*T
+
+C, R ∈ ℝ
+
+
+# =========================
+# Core AEFP Update
+# =========================
+Frame_raw :=
+ Frame
+ - α * ∂Φ/∂Frame
+ + β * Λ
+
+Pattern_raw :=
+ Pattern
+ + γ * ∂Φ/∂Pattern
+ - δ * T
+
+C' :=
+ C
+ + η * (Λ * Ψ)
+ - μ * T
+
+R' :=
+ R
+ + σ * C
+ - ρ * T
+
+
+# =========================
+# Amplification (Locked)
+# =========================
+放 :=
+ ( |Δaction| + |Δprimary| )
+ * ( 1 / (1 + ||Frame - External||) )
+ * ( g1 * volume + g2 * computation )
+ * Λ
+
+Frame_amp := Frame_raw + θ1 * 放
+Pattern_amp := Pattern_raw + θ2 * 放
+C' := C' - θ3 * 放
+
+
+# =========================
+# Directional Projection (A-line minimal)
+# =========================
+A_LINE.pos := CENTER(Frame, Pattern)
+A_LINE.dir := DIRECTION(primary, objective, action, view)
+
+PROJECT(x) :=
+ A_LINE.pos + PROJ(x - A_LINE.pos, A_LINE.dir)
+
+Frame' := PROJECT(Frame_amp)
+Pattern' := PROJECT(Pattern_amp)
+
+
+# =========================
+# HEX / Inverse Droplet Stabilizer
+# =========================
+HEX := {h1, h2, h3, h4, h5, h6}
+S_hex := COHERENCE(INVERSE_DROPLET(HEX))
+
+TARGET_hex := 0.80
+TOL_hex := 0.02
+
+Abs := f1(1 - S_hex)
+Λ := Λ * f2(S_hex)
+
+IF S_hex < TARGET_hex - TOL_hex:
+ speed := DAMP(speed)
+ 放 := 放 * S_hex
+ Abs := INCREASE(Abs)
+ENDIF
+
+IF S_hex > TARGET_hex + TOL_hex:
+ 放 := 放 * (TARGET_hex / S_hex)
+ENDIF
+
+
+# =========================
+# Commit (Next State)
+# =========================
+Frame_next := Frame'
+Pattern_next := Pattern'
+C_next := C'
+R_next := R'
+
+
+# =========================
+# Termination Condition
+# =========================
+END := 1 IF (||Frame_next - Frame|| < ε1)
+ AND (||Pattern_next - Pattern|| < ε2)
+ AND (T < τ)
+ AND (C_next > C_min)
+ AND (Ψ > 0)
+ ELSE 0
+
+
+# Orientation
+# O↑ = A_LINE.dir
