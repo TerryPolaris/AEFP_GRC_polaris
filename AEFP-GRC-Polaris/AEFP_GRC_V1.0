@@ -1,0 +1,64 @@
+ENGINE="AEFP_Symbolic_Crystal_1400_revStyleA"
+MODE="A_LINE_MIN"
+
+# ========= AEFP =========
+AEFP(t)=(A,E,F,P)
+A={主,次,目}
+E=(動,背)
+F=(視,域,旨)
+P=(勢,速,窗)
+
+Φ = U(A,E,F)
+T = ||F-P||
+Λ = 1/(1+T)
+Ψ = Φ - κT
+C,R ∈ ℝ
+
+# ========= A-LINE =========
+A_LINE.pos = CENTER(F,P)
+A_LINE.dir = DIRECTION(主,目,動,視)
+PROJECT(x) = A_LINE.pos + PROJ(x-A_LINE.pos,A_LINE.dir)
+
+# ========= CORE =========
+F_raw = F - α∂Φ/∂F + βΛ
+P_raw = P + γ∂Φ/∂P - δT
+C' = C + η(ΛΨ) - μT
+R' = R + σC - ρT
+
+# ========= AMPLIFY (LOCKED) =========
+放 = (|Δ動|+|Δ主|)*(1/(1+||F-外||))*(g1*量+g2*算)*Λ
+F_amp = F_raw + θ1放
+P_amp = P_raw + θ2放
+C' = C' - θ3放
+
+# ========= A-LINE PROJECTION =========
+F_next = PROJECT(F_amp)
+P_next = PROJECT(P_amp)
+
+# ========= HEX / INVERSE DROPLET =========
+HEX={h1..h6}
+S_hex = COHERENCE(INVERSE_DROPLET(HEX))
+
+TARGET_hex = 0.80
+TOL_hex = 0.02
+
+Abs = f1(1-S_hex)
+Λ = Λ * f2(S_hex)
+
+IF S_hex < TARGET_hex-TOL_hex:
+  速 = DAMP(速)
+  放 = 放 * S_hex
+  Abs = INCREASE(Abs)
+ENDIF
+
+IF S_hex > TARGET_hex+TOL_hex:
+  放 = 放 * (TARGET_hex/S_hex)
+ENDIF
+
+# ========= TERMINATION =========
+END=1 IF ||F_next-F||<ε1
+        AND ||P_next-P||<ε2
+        AND T<τ AND C>C_min AND Ψ>0
+     ELSE 0
+
+# O↑ = A_LINE.dir
