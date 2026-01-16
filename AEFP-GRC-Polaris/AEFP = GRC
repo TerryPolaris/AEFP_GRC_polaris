@@ -1,0 +1,10 @@
+AEFP = GRC
+(Actor,Event,Frame,Pattern) = (Generative, Resilence, Coherence/content)
+
+
+dΦ/dt = αΦ - βΦ^3 + λ_R(Φ_max-Φ) - σ + O + D(Φ) - τ(T) - B(Φ,T) + γ·C(Ψ)
+
+Order parameter 𝐶
+C=
+​N1​i=1∑N​ei(θi​−θˉ)
+​
