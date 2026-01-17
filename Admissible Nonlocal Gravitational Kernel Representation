@@ -1,0 +1,7 @@
+\boxed{
+v_f^2(r)
+=
+r \frac{d}{dr}
+\int_0^\infty K_f(r,r')\,\rho(r')\,dr'
+}
+
