@@ -34,3 +34,17 @@ G grammar/Generate
 R Resilient
 C Context
 
+by Huang Yew Thai
+
+I am Terry, an independent researcher and designer exploring the foundations of intelligence, computation, and structure.
+
+Currently, I am developing experimental AGI-related systems using mid-grade personal hardware at home. Rather than approaching AGI purely as a software engineering problem, I treat it as a structural and physical question—one that must ultimately align with the same underlying principles that govern the universe.
+
+I use large language models as computational instruments to explore connections across domains, including social narratives, physics, mathematical operators, quantum concepts, philosophy, and symbolic systems. Through this interdisciplinary approach, I investigate structural invariants and boundary conditions—such as the potential role of inverse-square relationships (r⁻²) as stabilizing limits within dynamic systems.
+
+My work integrates operator theory, functional systems, Lie group dynamics, and a conceptual framework I refer to as AEFP-GRC, which serves as a structural bridge between language models, adaptive AI systems, and potential AGI architectures.
+
+My long-term goal is not simply to build intelligence, but to ensure that such systems can serve real human needs—especially in areas such as survival, cognition, and memory continuity.
+
+This path is long, experimental, and uncertain. But I believe it is worth walking.
+
