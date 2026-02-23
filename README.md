@@ -10,52 +10,27 @@ Where:
 	•	Φ (Propagation): dynamics within that structure (flows, reasoning, evolution)
 	•	O (Observables): human-facing outputs (interpretations, narratives, measurements)
 
-This framework models any system in which raw data is transformed into observable meaning through an intermediate structural layer.
 
-⸻
 
-Interpretation
+observer_only=Π_obs; nimd_guard=∇R=0;
+State: Φ∈H_F; Ψ semantic; Π projection; Γ feedback;
+𝔤=span{X_D,X_G,X_Γ,X_L,X_S};
+𝓚_F≡generator(Φ)=X_D+X_G−X_Γ+X_L−X_S;
+DΦ/Dτ=𝓚_FΦ; Φ_{t+1}=exp(Δτ𝓚_F)Φ_t;
+ρ(𝓚_F)≤0⇒stable attractor;
+PDE: ∂τΦ=DΔΦ+AΦ−BΦ³+ΓΠĈ(Ψ);
+O=ΠΦ; Ψ=ΠO; Ψ→(Π,Γ)→Φ loop;
+q=r∂rO≈const⇒C=2;
+Chain: F−2→F−1→S→G→Φ→O→Ψ;
+AEFP={A,E,F,P}; GRC={G,R,C};
+G,R,C stabilize Φ;
+out{Φ,dΦ,zone,alerts,falsifiers}
 
-The core idea is:
-
-Observables are not direct functions of data.
-They are projections of dynamics evolving inside induced geometries.
-
-Formally:
-
-O = Π ∘ Φ ∘ 𝒢 [S]
-
-Where Π denotes a projection or observation operator.
-
-⸻
-
-AEFP / GRC Mapping
-
-This structure is compatible with the AEFP / GRC decomposition:
-	•	AEFP: Actor / Event / Frame / Pattern
-(minimal grammar of observable structure)
-	•	GRC: Grammar / Resilience / Context
-(stability conditions of interpretation)
-
-Together, they describe how systems generate meaning, coherence, and dynamics from distributed sources.
-
-⸻
-
-Scope
-
-This meta-framework applies across domains:
-	•	Physics: mass → spacetime → motion → measurement
-	•	AI: data → representation space → inference → outputs
-	•	OSINT: evidence → narrative geometry → analysis → explanations
-	•	Social systems: information → institutional structure → belief dynamics → public narratives
-
-⸻
-
-Core Principle
-
-What governs system behavior is not events, but the geometry that propagates them.
-
-This repository treats geometry (𝒢) and propagation (Φ) as first-class objects of analysis, rather than secondary artifacts.
-
-The goal is not to model specific outcomes, but to make the structure of observation itself explicit and computable.
+A Actor
+E Event
+F Frame
+P Pattern
+G grammar/Generate 
+R Resilient
+C Context
 
